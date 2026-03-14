@@ -1,0 +1,180 @@
+.owners {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px 20px;
+}
+
+.owners .card {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 130px;
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--main-color);
+  transition: all var(--transition-base);
+}
+
+.owners .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--nav-color);
+}
+
+.owners .card img {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  margin-right: 20px;
+  background-color: white;
+  border: 3px solid var(--main-color);
+  object-fit: cover;
+  transition: border-color var(--transition-base);
+}
+
+.owners .card:hover img {
+  border-color: var(--nav-color);
+}
+
+.owners .card .details {
+  flex: 1;
+}
+
+.owners .card .details p:first-child {
+  font-size: 18px;
+  color: var(--main-color);
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.owners .card .details p:last-child {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.4;
+}
+
+.owners h3 {
+  font-size: 50px;
+  margin: 50px;
+  width: 100%;
+  text-align: center;
+  color: var(--main-color);
+  position: relative;
+}
+
+.owners h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--nav-color);
+  margin: 20px auto 0;
+  border-radius: var(--radius-xl);
+}
+
+.owners h3 span {
+  font-family: var(--Lobster);
+  color: var(--nav-color);
+}
+
+.owners .cafe {
+  background-image: url("../../../public/photos/cafe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  max-width: 1000px;
+  height: 80vh;
+  margin: 60px auto 100px;
+  border-radius: var(--radius-xl);
+  mix-blend-mode: multiply;
+  position: relative;
+}
+
+.owners .cafe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(96, 56, 19, 0.3),
+    rgba(96, 56, 19, 0.1)
+  );
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.owners .cafe:hover::before {
+  background: linear-gradient(
+    135deg,
+    rgba(96, 56, 19, 0.1),
+    rgba(96, 56, 19, 0.05)
+  );
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .owners {
+    padding: 30px 15px;
+    gap: 25px;
+  }
+
+  .owners h3 {
+    font-size: 36px;
+    margin: 30px 15px;
+  }
+
+  .owners .card {
+    width: 100%;
+    max-width: 350px;
+    height: 110px;
+    padding: 20px 15px;
+  }
+
+  .owners .card img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .owners .card .details p:first-child {
+    font-size: 16px;
+  }
+
+  .owners .card .details p:last-child {
+    font-size: 14px;
+  }
+
+  .owners .cafe {
+    height: 50vh;
+    margin: 40px auto 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .owners h3 {
+    font-size: 28px;
+  }
+
+  .owners .card {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .owners .card img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .owners .cafe {
+    height: 40vh;
+  }
+}

@@ -1,0 +1,69 @@
+.count-component {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 3px solid var(--bg-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-base);
+}
+
+.count-component:hover {
+  border-color: var(--main-color);
+}
+
+.count-component button {
+  background-color: var(--bg-color);
+  font-size: 20px;
+  padding: 12px 18px;
+  border: none;
+  color: var(--main-color);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count-component button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.count-component button:active {
+  transform: scale(0.95);
+}
+
+.count-component button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.count-component button:disabled:hover {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+
+.count-component p {
+  font-size: 20px;
+  margin: 0 15px;
+  font-weight: 700;
+  color: var(--main-color);
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .count-component button {
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+
+  .count-component p {
+    font-size: 18px;
+    margin: 0 12px;
+    min-width: 30px;
+  }
+}

@@ -1,0 +1,77 @@
+import { FaHeart } from "react-icons/fa";
+import coffee from "/photos/coffee-product.png";
+import greenTea from "/photos/tea.png";
+import osmosey from "/photos/osmosey.png";
+
+export const Details = [
+  {
+    id: 1,
+    img: coffee,
+    label: "",
+    icon: <FaHeart />,
+    name: "Turkish Coffee",
+    price: 23,
+    discount: 30,
+    category: "coffee",
+  },
+  {
+    id: 2,
+    img: greenTea,
+    label: "save 10%",
+    icon: <FaHeart />,
+    name: "Green Tea",
+    price: 42,
+    discount: 48,
+    category: "tea",
+  },
+  {
+    id: 3,
+    img: coffee,
+    label: "save 10%",
+    icon: <FaHeart />,
+    name: "Orange Juice",
+    price: 50,
+    discount: 60,
+    category: "juice",
+  },
+  {
+    id: 4,
+    img: coffee,
+    label: "New",
+    icon: <FaHeart />,
+    name: "Lemon Juice",
+    price: 30,
+    discount: null,
+    category: "juice",
+  },
+  {
+    id: 5,
+    img: coffee,
+    label: "New",
+    icon: <FaHeart />,
+    name: "Tea",
+    price: 12,
+    discount: null,
+    category: "tea",
+  },
+  {
+    id: 6,
+    img: coffee,
+    label: "save 10%",
+    icon: <FaHeart />,
+    name: "Hazelnut Coffee",
+    price: 12,
+    discount: 20,
+    category: "coffee",
+  },
+  {
+    id: 7,
+    img: osmosey,
+    label: "",
+    icon: <FaHeart />,
+    name: "Cherry Smoothie",
+    price: 25,
+    discount: null,
+    category: "osmosey",
+  },
+];
