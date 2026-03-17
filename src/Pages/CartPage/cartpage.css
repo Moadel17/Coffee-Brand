@@ -10,6 +10,7 @@
 
 .cart-page.none {
   width: 50%;
+  padding-top: 30px;
   height: 600px;
 }
 
@@ -184,6 +185,12 @@
   }
   .cart-page .products .product .data .btn {
     justify-content: center;
+  }
+}
+
+@media (max-width: 835px) {
+  .cart-page .products {
+    padding: 0 40px;
   }
 }
 

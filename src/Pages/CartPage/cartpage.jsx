@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Count from "../SingleProduct/count/count";
+import Count from "../../Components/count/count";
 import "./cartpage.css";
 import { Details } from "../Shop Page/cardDetails";
 import { CART } from "../../Context/cart";

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   background-color: white;
-  border: 3px solid var(--bg-color);
+  border: 3px solid var(--main-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color var(--transition-base);
