@@ -1,6 +1,6 @@
 import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import "./singleProduct.css";
-import Count from "./count/count";
+import Count from "../../Components/count/count";
 import { Link, useParams } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
@@ -43,7 +43,11 @@ export default function SingleProduct() {
       </Link>
       <div key={product.id} className="product">
         <div className="image">
-          <p className="label">{product.label}</p>
+          <p
+            className="label"
+            style={{ display: product.label ? "block" : "none" }}>
+            {product.label}
+          </p>
           <img src={product.img} alt="" />
         </div>
         <div className="product-data">

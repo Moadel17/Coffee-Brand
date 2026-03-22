@@ -14,11 +14,6 @@ export const Btns = [
     href: "/shop",
   },
   {
-    text: "Products",
-    id: 3,
-    href: "#products",
-  },
-  {
     text: "Our Placses",
     id: 4,
   },

@@ -57,9 +57,10 @@
 
 .cart-page .products .product {
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 50px auto;
   gap: 80px;
   background-color: var(--bg-color);
@@ -198,10 +199,20 @@
   .cart-page {
     top: 95px;
   }
+  .cart-page .products {
+    padding: 15px;
+  }
+  .cart-page .products .product {
+    /* padding: 50px; */
+  }
 }
 
 @media (max-width: 376px) {
   .cart-page {
     top: 125px;
+  }
+  .cart-page .products .product .data .btn a  , .cart-page .products .product .data .btn button{
+    font-size: 20px;
+    width: 200px;
   }
 }
