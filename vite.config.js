@@ -2,6 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "./", // ← مهم جدًا للنشر على Vercel
+  base: "/Coffee-Brand/", // ← ضع اسم الريبو هنا
   plugins: [react()],
 });
