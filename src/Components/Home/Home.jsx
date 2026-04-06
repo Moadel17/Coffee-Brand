@@ -11,7 +11,7 @@ export default function Home() {
 
   // ✅ تحميل اللوتي من public
   useEffect(() => {
-    fetch("/animations/coffee.json")
+    fetch("/animations/Coffee Shop Barista.json")
       .then((res) => res.json())
       .then((data) => setAnimationData(data));
   }, []);
@@ -24,13 +24,11 @@ export default function Home() {
         style={{
           textAlign: isWindow >= 953 ? "left" : "center",
           width: isWindow >= 953 ? "50%" : "100%",
-        }}
-      >
+        }}>
         <motion.h2
           initial={{ opacity: 0, y: -50, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
+          transition={{ delay: 0.5, duration: 1 }}>
           Brew Your Morning with Coffee
         </motion.h2>
 
@@ -40,15 +38,14 @@ export default function Home() {
               isWindow >= 859
                 ? "20px"
                 : isWindow > 755
-                ? "18px"
-                : isWindow > 688
-                ? "16px"
-                : "14px",
+                  ? "18px"
+                  : isWindow > 688
+                    ? "16px"
+                    : "14px",
           }}
           initial={{ opacity: 0, y: -50, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
+          transition={{ delay: 0.5, duration: 1 }}>
           Handpicked Beans, Crafted for You for the bold flavors and smooth
           experience.
         </motion.p>
@@ -56,8 +53,7 @@ export default function Home() {
         <motion.button
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
+          transition={{ delay: 0.5, duration: 1 }}>
           <IoCartOutline /> Shop Now
         </motion.button>
       </div>
@@ -67,8 +63,7 @@ export default function Home() {
         className="home-right"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
+        transition={{ delay: 0.5 }}>
         {animationData && (
           <Lottie
             animationData={animationData}
