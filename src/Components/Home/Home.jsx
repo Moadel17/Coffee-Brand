@@ -1,13 +1,19 @@
 import { IoCartOutline } from "react-icons/io5";
 import "./home.css";
-import bg from "../../../public/animations/Coffee Shop Barista.json";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Window } from "../../Context/windowWidth";
 
 export default function Home() {
   const isWindow = useContext(Window);
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("/animations/Coffee Shop Barista.json")
+      .then((res) => res.json())
+      .then((res) => setData(res));
+  }, []);
 
   const homeLeft = (
     <div
@@ -54,7 +60,7 @@ export default function Home() {
       animate={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ delay: 0.5, duration: 0.7, ease: "easeIn" }}
       className="home-right">
-      <Lottie animationData={bg} loop={true} />
+      {data && <Lottie animationData={bg} loop={true} />}
     </motion.div>
   );
 
