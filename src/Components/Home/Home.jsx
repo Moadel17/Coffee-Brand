@@ -1,6 +1,6 @@
 import { IoCartOutline } from "react-icons/io5";
 import "./home.css";
-import bg from "../../../public/animations/Coffee Shop Barista.json";
+import bg from "../../Coffee Shop Barista.json";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useContext } from "react";
