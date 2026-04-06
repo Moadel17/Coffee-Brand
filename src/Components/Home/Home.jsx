@@ -60,7 +60,7 @@ export default function Home() {
       animate={{ opacity: 1, filter: "blur(0px)" }}
       transition={{ delay: 0.5, duration: 0.7, ease: "easeIn" }}
       className="home-right">
-      {data && <Lottie animationData={bg} loop={true} />}
+      {data && <Lottie animationData={data} loop={true} />}
     </motion.div>
   );
 
