@@ -389,8 +389,8 @@
   }
 }
 
-@media (max-width: 315px){
+@media (max-width: 315px) {
   .nav-side {
-    top: 134px
+    top: 134px;
   }
-};
+}
