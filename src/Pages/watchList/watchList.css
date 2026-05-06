@@ -1,0 +1,253 @@
+.watch-list {
+  position: relative;
+  top: 75px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+}
+
+.watch-list.show {
+  width: 80%;
+}
+
+.watch-list.none {
+  width: 60%;
+}
+
+.watch-list .empty {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.watch-list .empty svg {
+  color: #d1d5dc;
+  font-size: 100px;
+}
+
+.watch-list .empty h2 {
+  text-align: center;
+  font-size: 60px;
+  font-family: var(--Lobster);
+}
+
+.watch-list .empty .btn-shop {
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top: 30px;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  border: 1px solid var(--main-color);
+  outline: none;
+  transition: var(--transition-slow);
+}
+
+.watch-list .empty .btn-shop:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+}
+
+.watch-list .label {
+  margin-top: 40px;
+}
+
+.watch-list .label h2 {
+  font-size: 50px;
+  text-align: center;
+  font-family: var(--Lobster);
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+.watch-list .label h2::before {
+  content: "";
+  bottom: 0;
+  left: 90px;
+  width: 100px;
+  height: 4px;
+  background-color: var(--nav-color);
+  position: absolute;
+}
+
+.watch-list .label h2 svg {
+  font-size: 45px;
+  color: red;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.watch-list .item-count {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin: 30px 0;
+}
+
+.watch-list .btn {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  right: 50px;
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: var(--danger);
+  background-color: transparent;
+  gap: 10px;
+  border-radius: 20px;
+  border: 3px solid #ffe2e2;
+  outline: none;
+  transition: var(--transition-slow);
+}
+
+.watch-list .btn:hover {
+  background-color: #ffe2e2;
+}
+
+.watch-list .cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 30px;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.watch-list .cards .card {
+  width: 300px;
+  height: fit-content;
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.watch-list .cards .card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.watch-list .cards .card .label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.watch-list .cards .card .label p {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  background-color: var(--nav-color);
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  width: fit-content;
+  border-radius: var(--radius-xl);
+  cursor: auto;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.watch-list .cards .card .label button {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe2e2;
+  color: var(--danger);
+  z-index: 2;
+}
+
+.watch-list .cards .card .label button:hover {
+  color: var(--danger);
+  transform: scale(1.15);
+  background-color: #ffe2e2;
+}
+
+.watch-list .cards .card img {
+  width: 300px;
+  height: 280px;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.watch-list .cards .card:hover img {
+  transform: scale(1.05);
+}
+
+.watch-list .cards .card h5 {
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--main-color);
+  cursor: auto;
+  line-height: 1.3;
+}
+
+.watch-list .cards .card .price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0 15px 15px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  cursor: auto;
+}
+
+.watch-list .cards .card .price .new-price {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.watch-list .cards .card .price .old-price {
+  color: var(--gray);
+  text-decoration: line-through;
+  font-size: 16px;
+}
+.watch-list .cards .card button {
+  background-color: var(--main-color);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: var(--radius-2xl);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid var(--main-color);
+  transition: all var(--transition-base);
+}
+
+.watch-list .cards .card button:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}

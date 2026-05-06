@@ -1,0 +1,360 @@
+.products-secttion {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.products-secttion h3 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+  color: var(--main-color);
+  word-spacing: 10px;
+  letter-spacing: 2px;
+  font-family: var(--Lobster);
+  position: relative;
+}
+
+.products-secttion h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--nav-color);
+  margin: 15px auto 0;
+  border-radius: var(--radius-xl);
+}
+
+.products-secttion .cateogry-label {
+  font-size: 30px;
+  font-family: var(--Lobster);
+  text-align: center;
+  margin: 100px 0 50px;
+  color: var(--main-color);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Category Items */
+.products-secttion .category-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: var(--main-color);
+  padding: 0 40px;
+  gap: 80px;
+}
+
+.products-secttion .category-items button {
+  background-color: transparent;
+  outline: none;
+  border-radius: var(--radius-full);
+  padding: 5px;
+  transition: transform var(--transition-base);
+}
+
+.products-secttion .category-items button:hover {
+  transform: scale(1.1);
+}
+
+.products-secttion .category-items button .link {
+  background-color: #e2dfcf;
+  padding: 20px;
+  display: block;
+  font-size: 30px;
+  border-radius: var(--radius-full);
+  color: var(--main-color);
+  animation: rotate 4s 0s linear infinite;
+  transition: all var(--transition-base);
+}
+
+.products-secttion .category-items button:hover .link {
+  animation: rotate 0.5s 0s linear;
+  background-color: var(--nav-color);
+  color: white;
+}
+
+.products-secttion .category-items h5 {
+  font-size: 18px;
+  margin: 15px 0 0;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.products-secttion .category-items button:hover h5 {
+  color: var(--nav-color);
+}
+
+/* Most Sell */
+.most-sell {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  gap: 40px;
+}
+
+.most-sell .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  background-color: white;
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.most-sell .card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.most-sell .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  height: 250px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.most-sell .text p:first-child {
+  font-size: 17px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 30px;
+  border-radius: var(--radius-md);
+  cursor: auto;
+  position: absolute;
+  top: 10px;
+}
+
+.most-sell .text h5 {
+  font-size: 25px;
+  margin: 50px 0 20px;
+  color: var(--main-color);
+}
+
+.most-sell .text .link {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: 5px 0;
+  color: var(--main-color);
+}
+
+.most-sell .text .link:hover svg,
+.most-sell .text .link:hover p {
+  color: var(--nav-color);
+}
+
+.most-sell .text .link svg {
+  background-color: transparent;
+  color: var(--main-color);
+  margin-right: 10px;
+  transition: all var(--transition-base);
+}
+
+.most-sell .text .link p {
+  background-color: transparent;
+  color: var(--main-color);
+  padding: 0 0 4px;
+  position: relative;
+  transition: all var(--transition-base);
+  margin: 0;
+  font-weight: 700;
+}
+
+.most-sell .text .link p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--main-color);
+  height: 2px;
+  left: 0;
+  transition: all var(--transition-base);
+}
+
+.most-sell .text .link:hover p::after {
+  background-color: var(--nav-color);
+}
+
+.most-sell img {
+  width: 50%;
+  height: 250px;
+  border-radius: var(--radius-xl);
+  background-color: white;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.most-sell .card:hover img {
+  transform: scale(1.05);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Last Products */
+.products-secttion .last-products {
+  width: 100%;
+}
+
+.products-secttion .last-products .products {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.products-secttion .last-products .products .card {
+  width: 300px;
+  height: 420px;
+  background-color: white;
+  position: relative;
+  padding: 40px 0 10px;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.products-secttion .last-products .products .card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--nav-color);
+}
+
+.products-secttion .last-products .products .card p:first-child {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--nav-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: var(--radius-xl);
+  cursor: auto;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.products-secttion .last-products .products .card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.products-secttion .last-products .products .card:hover img {
+  transform: scale(1.08);
+}
+
+.last-products .products .card h4 {
+  background-color: white;
+  text-align: left;
+  font-size: 18px;
+  color: var(--main-color);
+  font-weight: 700;
+  margin: 15px 10px 5px;
+  cursor: auto;
+  line-height: 1.3;
+}
+
+.last-products .products .card p span {
+  text-align: left;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: auto;
+  display: block;
+  margin: 0 10px;
+  color: var(--nav-color);
+}
+
+.last-products .products .card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 12px 0;
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.last-products .products .card .icon.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.last-products .products .card .icon svg {
+  font-size: 20px;
+}
+
+.last-products .products .card:hover .icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.last-products .products .card .icon:hover {
+  background-color: var(--nav-color);
+}
+
+@media (max-width: 450px) {
+  .most-sell .card {
+    flex-direction: column;
+  }
+  .most-sell .card img {
+    width: 100%;
+    height: 420px;
+  }
+  .most-sell .card {
+    height: 520px;
+  }
+  .most-sell .card .text {
+    order: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .most-sell .card .text p:first-child {
+    top: -420px;
+  }
+  .most-sell .card .text h5 {
+    margin-top: 10px;
+  }
+  .most-sell .card .text .link {
+    font-size: 17px;
+  }
+}
