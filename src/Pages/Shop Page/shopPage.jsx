@@ -44,6 +44,7 @@ export default function ShopPage() {
     localStorage.setItem("fav", JSON.stringify(current));
     setF([...current]);
   }
+  
   return (
     <div
       style={{ top: isWindow >= 724 ? "110px" : "130px" }}

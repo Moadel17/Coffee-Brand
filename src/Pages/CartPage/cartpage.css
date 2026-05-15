@@ -5,13 +5,11 @@
   margin: 0px auto;
   padding: 100px 0;
   position: relative;
-  top: 100px;
 }
 
 .cart-page.none {
-  width: 50%;
+  width: 80%;
   padding-top: 30px;
-  height: 600px;
 }
 
 .cart-page .empty {
@@ -28,7 +26,7 @@
 
 .cart-page .empty h2 {
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   font-family: var(--Lobster);
 }
 
@@ -196,9 +194,6 @@
 }
 
 @media (max-width: 480px) {
-  .cart-page {
-    top: 95px;
-  }
   .cart-page .products {
     padding: 15px;
   }
@@ -208,10 +203,8 @@
 }
 
 @media (max-width: 376px) {
-  .cart-page {
-    top: 125px;
-  }
-  .cart-page .products .product .data .btn a  , .cart-page .products .product .data .btn button{
+  .cart-page .products .product .data .btn a,
+  .cart-page .products .product .data .btn button {
     font-size: 20px;
     width: 200px;
   }

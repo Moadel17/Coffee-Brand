@@ -1,6 +1,5 @@
 /* الحاوية */
 .dropdown-container {
-  position: relative;
   width: 300px;
   z-index: 10;
 }
@@ -53,4 +52,11 @@
   background-color: var(--main-color);
   color: white;
   padding-left: 25px;
+}
+
+@media (max-width: 480px) { 
+.dropdown-container {
+  width: 240px;
+}
+
 }

@@ -8,8 +8,10 @@ import { useContext, useState } from "react";
 import { Details } from "../Shop Page/cardDetails";
 import { Window } from "../../Context/windowWidth";
 import { CART } from "../../Context/cart";
+import { Fav } from "../../Context/fav";
 
 export default function SingleProduct() {
+  const { f, setF } = useContext(Fav);
   const [watchList, setWatch] = useState(false);
   const { id } = useParams();
   const product = Details.find((item) => item.id === Number(id));
@@ -20,6 +22,7 @@ export default function SingleProduct() {
   function addToCart(id) {
     const localCart = JSON.parse(localStorage.getItem("cart")) || [];
     const item = localCart.findIndex((product) => product.id === id);
+
     if (item !== -1) {
       localCart[item].count += count;
     } else {
@@ -31,6 +34,17 @@ export default function SingleProduct() {
     }
     localStorage.setItem("cart", JSON.stringify(localCart));
     setCart([...localCart]);
+  }
+
+  function addTofav(id) {
+    let current = JSON.parse(localStorage.getItem("fav")) || [];
+    if (current.includes(id)) {
+      current = current.filter((item) => item !== id);
+    } else {
+      current.push(id);
+    }
+    localStorage.setItem("fav", JSON.stringify(current));
+    setF([...current]);
   }
 
   return (
@@ -70,7 +84,13 @@ export default function SingleProduct() {
               <FaCartShopping /> Add to cart
             </button>
             <button
-              onClick={() => setWatch((prev) => !prev)}
+              onClick={() => {
+                addTofav(product.id);
+                setWatch(true);
+                setTimeout(() => {
+                  setWatch(false);
+                }, 4000);
+              }}
               className={watchList === false ? "" : "watch-list"}>
               <FaHeart />
               Add to watchList

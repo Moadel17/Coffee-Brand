@@ -1,9 +1,8 @@
 .single-product {
-  position: relative;
   background-color: white;
   width: 95%;
   max-width: 1200px;
-  margin: 120px auto 50px;
+  margin: 0 auto;
   padding: 40px;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
@@ -294,7 +293,9 @@
   .single-product .product .image img {
     max-height: 350px;
   }
-
+  .single-product .product .image .label {
+    top: 40px;
+  }
   .single-product .product .product-data {
     margin: 0;
     padding: 20px;
@@ -334,6 +335,11 @@
 
   .single-product .product .image img {
     max-height: 280px;
+  }
+
+  .single-product .product .image .label {
+    top: 20px;
+    left: 20px;
   }
 
   .single-product .product .product-data h3 {

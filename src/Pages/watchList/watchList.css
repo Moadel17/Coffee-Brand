@@ -1,6 +1,5 @@
 .watch-list {
   position: relative;
-  top: 75px;
   margin: 0 auto;
   padding: 30px;
   background-color: white;
@@ -11,7 +10,7 @@
 }
 
 .watch-list.none {
-  width: 60%;
+  width: 80%;
 }
 
 .watch-list .empty {
@@ -28,7 +27,7 @@
 
 .watch-list .empty h2 {
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   font-family: var(--Lobster);
 }
 

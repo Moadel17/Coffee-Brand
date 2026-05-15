@@ -1,8 +1,5 @@
 .shop-page {
-  position: relative;
-  top: 110px;
   width: 90%;
-  max-width: 1400px;
   margin: 0 auto;
   background-color: white;
   padding: 0 40px 40px;
@@ -77,6 +74,7 @@
     rgba(253, 129, 18, 0.05)
   );
   border: 1px solid rgba(96, 56, 19, 0.1);
+  overflow: hidden;
 }
 
 .shop-page .filter-box .icon {
@@ -126,9 +124,9 @@
 .shop-page .filter-box .inputs .search {
   display: flex;
   align-items: center;
-  padding: 12px 15px;
+  padding: 15px;
   border-radius: var(--radius-lg);
-  border: 2px solid var(--bg-color);
+  border: 2px solid var(--black);
   gap: 10px;
   width: 100%;
   max-width: 300px;
@@ -136,16 +134,12 @@
   background-color: white;
 }
 
-.shop-page .filter-box .inputs .search:focus-within {
-  border-color: var(--main-color);
-}
-
 .shop-page .filter-box .inputs .search input {
   border: none;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--main-color);
-  flex: 1;
+  width: 300px;
   background: transparent;
 }
 
@@ -154,7 +148,7 @@
 }
 
 .shop-page .filter-box .inputs .search svg {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--gray);
 }
 
@@ -331,7 +325,6 @@
   .shop-page {
     width: 95%;
     padding: 0 15px 25px;
-    top: 100px;
   }
 
   .shop-page .label {
@@ -353,11 +346,8 @@
 
   .shop-page .filter-box .inputs {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
-  }
-
-  .shop-page .filter-box .inputs .search {
-    width: 100%;
   }
 
   .shop-page .cards {
@@ -374,7 +364,6 @@
   .shop-page {
     width: 100%;
     border-radius: 0;
-    top: 90px;
   }
 
   .shop-page .label h2 {
@@ -387,5 +376,8 @@
 
   .shop-page .cards .card img {
     height: 220px;
+  }
+  .shop-page .filter-box .inputs .search input {
+    width: 100%;
   }
 }

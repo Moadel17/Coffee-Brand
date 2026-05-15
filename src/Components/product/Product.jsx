@@ -37,8 +37,8 @@ export default function Products() {
           transition={{ duration: 0.5, delay: card.id * 0.1 }}
           className="card"
           key={card.id}>
+          <p className="label">{card.label}</p>
           <div className="text">
-            <p>{card.label}</p>
             <h5>{card.name}</h5>
             <Link className="link" to={`/productPage/${card.id}`}>
               {card.icon}
